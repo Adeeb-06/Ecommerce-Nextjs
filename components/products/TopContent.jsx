@@ -18,6 +18,7 @@ import {
     Pagination,
   } from "@nextui-org/react";
   import { PlusIcon } from './PlusIcon';
+import Link from 'next/link';
 
 const TopContent = () => {
   return (
@@ -37,6 +38,7 @@ const TopContent = () => {
             
           />
           <div className="flex gap-3">
+      <Link href={"/createProduct"}>
       
             <Button
               className="bg-foreground text-background"
@@ -45,6 +47,7 @@ const TopContent = () => {
             >
               Add New
             </Button>
+      </Link>
           </div>
         </div>
        
