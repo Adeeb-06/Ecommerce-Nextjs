@@ -13,6 +13,7 @@ import {
   SidebarMenuItem,
   SidebarRail,
 } from "@/components/ui/sidebar"
+import Link from "next/link";
 
 // This is sample data.
 const data = {
@@ -28,7 +29,7 @@ const data = {
         },
         {
           title: "Products",
-          url: "#",
+          url: "/admin/dashboard/product",
           isActive: true,
         },
         {
@@ -62,7 +63,7 @@ export function AppSidebar({
                 {item.items.map((item) => (
                   <SidebarMenuItem key={item.title}>
                     <SidebarMenuButton asChild isActive={item.isActive}>
-                      <a href={item.url}>{item.title}</a>
+                      <Link href={item.url}>{item.title}</Link>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                 ))}
